@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ass Day!</title>
+        <style>
+            body{
+                background-color: black;
+                color: rgb(248, 178, 178);
+                font-family: Arial;
+                text-align: center;
+            }
+            h1{
+                font-size: 200%;
+                margin-top: 25%;
+            }
+            h2{
+                font-size: 175%;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>Countdown to Ass Day!</h1>
+    <h2 id="timer"></p>
+    <script>
+        var countDownDate = new Date("February 25, 2021 00:00:00").getTime();
+	    var x = setInterval(function() {
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+		 if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "It's either Ass Day or past Ass Day!";
+  }
+}, 1000);
+    </script>
+    </body>
+</html>
